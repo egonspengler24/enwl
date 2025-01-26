@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Van Location Sort</title>
+    <title>Location Sorter</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvZzlAxWXCno0GrtWyYWUMqA1U4t2f4dk&libraries=places"></script>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <h1>Location Sorter - Food Vans</h1>
@@ -12,7 +18,8 @@
     <input type="text" id="postcode" placeholder="Enter postcode">
     <button onclick="sortLocations()">Sort Locations</button>
     <ul id="locationList"></ul>
+    <div id="map"></div>
 
-    <script src="script.js?q=4"></script>
+    <script src="script2.js?q=1"></script>
 </body>
 </html>
