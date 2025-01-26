@@ -10,7 +10,7 @@ const locations = [
     { name: "9. Southwards Farm Shop Swarthmoor", lat: 54.22163177842559, lng:-3.119214642337905 },
     { name: "10. Hundiith Hill Hotel Cockermouth", lat: 54.67833910277971, lng: -3.322461715183655 },
     { name: "11. The Strands Hotel Seascale", lat: 54.45381586086482, lng: -3.338941207576554 }, 
-
+    { name: "12. Maes Tea Rooms and Gallery", lat: 54.756075660633144, lng: -3.1713996640820725 }, 
     // Add more locations here
 ];
 
