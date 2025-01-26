@@ -12,8 +12,6 @@ const locations = [
     { name: "11. Maes Tea Rooms and Gallery", lat: 54.756075660633144, lng: -3.1713996640820725 }, 
     // Add more locations here
 ];
-    // Add more locations here
-];
 
 let map;
 let originMarker;
