@@ -14,6 +14,18 @@ const locations = [
     // Add more locations here
 ];
 
+let map;
+let originMarker;
+let destinationMarker;
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: { lat: 35.6895, lng: 139.6917 } // Default center
+    });
+ sortLocations();
+}
+
 function sortLocations() {
     const postcode = document.getElementById('postcode').value;
     const geocoder = new google.maps.Geocoder();
@@ -45,6 +57,7 @@ function sortLocations() {
                     locations.sort((a, b) => a.distance - b.distance);
 
                     displayLocations();
+                    updateMap(origin, locations[0]);
                 }
             });
         }
@@ -62,5 +75,29 @@ function displayLocations() {
     });
 }
 
-// Fetch locations when the page loads
- sortLocations();
+function updateMap(origin, nearestLocation) {
+    if (originMarker) {
+        originMarker.setMap(null);
+    }
+    if (destinationMarker) {
+        destinationMarker.setMap(null);
+    }
+
+    originMarker = new google.maps.Marker({
+        position: origin,
+        map: map,
+        title: 'Postcode Location'
+    });
+
+    destinationMarker = new google.maps.Marker({
+        position: { lat: nearestLocation.lat, lng: nearestLocation.lng },
+        map: map,
+        title: nearestLocation.name
+    });
+
+    map.setCenter(origin);
+    map.setZoom(12);
+}
+
+// Initialize the map when the page loads
+initMap();
