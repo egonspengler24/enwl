@@ -19,9 +19,10 @@ let originMarker;
 let destinationMarker;
 
 function initMap() {
+    const initialLocation = { lat: 51.5074, lng: -0.1278 }; // Example:
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
-        center: { lat: 35.6895, lng: 139.6917 } // Default center
+        center: initialLocation
     });
  sortLocations();
 }
