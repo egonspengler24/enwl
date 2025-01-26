@@ -1,6 +1,16 @@
 const locations = [
-    { name: "1. The Kings Arms", lat: 54.6952, lng: -2.81554 }, 
-    { name: "2. Crofton Hall", lat: 54.89216, lng: -3.10296 },   
+    { name: "1. The Kings Arms Stainton", lat: 54.720398785748024, lng: -2.8119654466647237 },
+    { name: "2. The Tavern Hale", lat: 54.270579424973214, lng: -2.762526969486028 },
+    { name: "3. Southwards catering St Bees", lat: 54.55189826318497, lng: -3.602981081523861 }, 
+    { name: "4. The Commodore Inn", lat: 54.260954968253756, lng: -2.9108424010221152 }, 
+    { name: "5. Landy Chef Catering Van Moresby Park Whitehaven", lat: 54.63782539893566, lng: -3.5370631119522664}, 
+    { name: "6. Graham Arms Inn Longtown", lat: 55.055308764187735, lng: -2.960280878200811 }, 
+    { name: "7. Barista Cafe Wigton", lat: 54.87872211581227, lng: -3.1140894738678666 }, 
+    { name: "8. Kings Head Hotel Kirby Stephen", lat: 54.4633952407491, lng: -2.4353157080325967 }, 
+    { name: "9. Southwards Farm Shop Swarthmoor", lat: 54.22163177842559, lng:-3.119214642337905 },
+    { name: "10. Hundiith Hill Hotel Cockermouth", lat: 54.67833910277971, lng: -3.322461715183655 },
+    { name: "11. The Strands Hotel Seascale", lat: 54.45381586086482, lng: -3.338941207576554 }, 
+
     // Add more locations here
 ];
 
