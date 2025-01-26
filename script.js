@@ -1,58 +1,48 @@
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: { lat: 51.5074, lng: -0.1278 }, // Adjust initial zoom level and center as needed
-  });
+const locations = [
+    { name: "Location 1", lat: 35.6895, lng: 139.6917 },
+    { name: "Location 2", lat: 34.0522, lng: -118.2437 },
+    // Add more locations here
+];
 
-  // Load list data (replace with your logic)
-  fetch("https://maps.app.goo.gl/LrNMXAQBYiRvPEaZ6")
-    .then((response) => response.json())
-    .then((listPoints) => {
-      window.listPoints = listPoints; // Store list points for later use
-      listPoints.forEach((point) => {
-        const marker = new google.maps.Marker({
-          position: point,
-          map: map,
-        });
-      });
+function sortLocations() {
+    const postcode = document.getElementById('postcode').value;
+    const geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({ 'address': postcode }, function(results, status) {
+        if (status == 'OK') {
+            const origin = results[0].geometry.location;
+            const service = new google.maps.DistanceMatrixService();
+
+            const destinationCoords = locations.map(loc => new google.maps.LatLng(loc.lat, loc.lng));
+
+            service.getDistanceMatrix({
+                origins: [origin],
+                destinations: destinationCoords,
+                travelMode: 'DRIVING',
+            }, function(response, status) {
+                if (status == 'OK') {
+                    const distances = response.rows[0].elements;
+                    for (let i = 0; i < locations.length; i++) {
+                        locations[i].distance = distances[i].distance.value;
+                        locations[i].duration = distances[i].duration.value;
+                    }
+
+                    locations.sort((a, b) => a.distance - b.distance);
+
+                    displayLocations();
+                }
+            });
+        }
     });
 }
 
-function calculateDistances() {
-  const postcode = document.getElementById("postcode").value;
-  const geocoder = new google.maps.Geocoder();
+function displayLocations() {
+    const list = document.getElementById('locationList');
+    list.innerHTML = '';
 
-  geocoder.geocode({ address: postcode }, (results, status) => {
-    if (status === "OK") {
-      const userLocation = results[0].geometry.location;
-      const resultsContainer = document.getElementById("results");
-      resultsContainer.innerHTML = ""; // Clear previous results
-
-      window.listPoints.forEach((point, index) => {
-        const distanceMatrixService = new google.maps.DistanceMatrixService();
-        distanceMatrixService.calculateDistanceMatrix({
-          origins: [userLocation],
-          destinations: [point],
-          travelMode: "driving", // Adjust travel mode as needed
-        }, (response, status) => {
-          if (status === "OK") {
-            const distance = response.rows[0].elements[0].distance.value;
-            const distanceText = formatDistance(distance);
-            resultsContainer.innerHTML += `<p>Point ${index + 1}: ${distanceText} away</p>`;
-          } else {
-            console.error("Distance calculation failed:", status);
-          }
-        });
-      });
-    } else {
-      alert("Geocoding failed: " + status);
-    }
-  });
-}
-
-function formatDistance(distance) {
-  // Convert meters to kilometers or miles as needed
-  const km = distance / 1000;
-  const miles = km / 1.60934;
-  return Math.round(km) + " km" + " (" + Math.round(miles) + " miles)";
+    locations.forEach(location => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${location.name} - ${location.distance / 1000} km - ${location.duration / 60} mins`;
+        list.appendChild(listItem);
+    });
 }
