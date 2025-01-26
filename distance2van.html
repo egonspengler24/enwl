@@ -1,77 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Google Maps List with Postcode Distance</title>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvZzlAxWXCno0GrtWyYWUMqA1U4t2f4dk&libraries=places"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Sorter</title>
 </head>
 <body>
-  <input type="text" id="postcodeInput" placeholder="Enter a postcode">
-  <button onclick="calculateDistances()">Calculate Distances</button>
-  <ul id="mapList"></ul>
+    <h1>Location Sorter</h1>
+    <input type="text" id="postcode" placeholder="Enter postcode">
+    <button onclick="sortLocations()">Sort Locations</button>
+    <ul id="locationList"></ul>
 
-  <script>
-    // JavaScript code will be added here
-      async function initMap() {
-  // Create a map instance and list for markers
-  const map = new google.maps.Map(document.createElement('div'));
-  const markers = [];
-
-  // Define points for the list
-  const points = [
-    { name: "Point 1", address: "13 Lowther Avenue, LA3 3AH" },
-    { name: "Point 2", address: "Lancaster University, United Kingdom, LA1 4YW" },
-    // Add more points as needed
-  ];
-
-  // Add markers and list items for each point
-  points.forEach(point => {
-    const marker = new google.maps.Marker({
-      map: map,
-      position: getLatLngFromAddress(point.address), // Get coordinates from address
-      title: point.name
-    });
-    markers.push(marker);
-
-    const listItem = document.createElement('li');
-    listItem.textContent = `${point.name} - Distance: N/A`;
-    document.getElementById('mapList').appendChild(listItem);
-  });
-}
-
-function calculateDistances() {
-  const enteredPostcode = document.getElementById('postcodeInput').value;
-  const origin = getLatLngFromPostcode(enteredPostcode);
-
-  markers.forEach((marker, index) => {
-    const destination = marker.getPosition();
-    const distance = google.maps.geometry.spherical.computeDistanceBetween(origin, destination);
-
-    const listItem = document.getElementById('mapList').children[index];
-    listItem.textContent = `${listItem.textContent.split('-')[0]} - Distance: ${distance.toFixed(2)} meters`;
-  });
-}
-
-function getLatLngFromAddress(address) {
-  // Use Geocoding API to get coordinates from address
-  return new Promise((resolve, reject) => {
-    const geocoder = new google.maps.Geocoder();
-    geocoder.geocode({ address }, (results, status) => {
-      if (status === 'OK') {
-        resolve(results[0].geometry.location);
-      } else {
-        reject(new Error(`Geocoding failed for address: ${address}`));
-      }
-    });
-  });
-}
-
-function getLatLngFromPostcode(postcode) {
-  // Use Geocoding API to get coordinates from postcode
-  return getLatLngFromAddress(postcode);
-}
-
-initMap();
-
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
