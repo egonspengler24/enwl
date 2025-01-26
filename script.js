@@ -82,17 +82,28 @@ function updateMap(origin, nearestLocation) {
         destinationMarker.setMap(null);
     }
 
+    const originIcon = {
+        url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', // Green icon for input location
+    };
+
+    const destinationIcon = {
+        url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png', // Red icon for nearest location
+    };
+
     originMarker = new google.maps.Marker({
         position: origin,
         map: map,
-        title: 'Postcode Location'
+        title: 'Postcode Location',
+        icon: originIcon
     });
 
     destinationMarker = new google.maps.Marker({
         position: { lat: nearestLocation.lat, lng: nearestLocation.lng },
         map: map,
-        title: nearestLocation.name
+        title: nearestLocation.name,
+        icon: destinationIcon
     });
+
 
     map.setCenter(origin);
     map.setZoom(12);
