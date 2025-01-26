@@ -1,26 +1,8 @@
-const locations = [];
-
-function fetchLocations() {
-    const service = new google.maps.places.PlacesService(document.createElement('div'));
-    const request = {
-        query: 'YOUR_GOOGLE_MAPS_LIST_QUERY', // Replace with your query or location
-        fields: ['name', 'geometry'],
-    };
-
-    service.textSearch(request, function(results, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            results.forEach(place => {
-                locations.push({
-                    name: place.name,
-                    lat: place.geometry.location.lat(),
-                    lng: place.geometry.location.lng(),
-                });
-            });
-            // Call sortLocations after fetching locations
-            sortLocations();
-        }
-    });
-}
+const locations = [
+    { name: "Location 1", lat: 35.6895, lng: 139.6917 },
+    { name: "Location 2", lat: 34.0522, lng: -118.2437 },
+    // Add more locations here
+];
 
 function sortLocations() {
     const postcode = document.getElementById('postcode').value;
