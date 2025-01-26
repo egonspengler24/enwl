@@ -19,7 +19,7 @@ let originMarker;
 let destinationMarker;
 
 function initMap() {
-    const initialLocation = { lat: 51.5074, lng: -0.1278 }; // Example:
+    const initialLocation = { lat: 54.54313629496225, lng: -3.0505500532008156 }; // 54.54313629496225, -3.0505500532008156
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: initialLocation
