@@ -1,6 +1,6 @@
 const locations = [
-    { name: "Location 1", lat: 35.6895, lng: 139.6917 },
-    { name: "Location 2", lat: 34.0522, lng: -118.2437 },
+    { name: "1. The Kings Arms", lat: 54.6952, lng: -2.81554 }, 
+    { name: "2. Crofton Hall", lat: 54.89216, lng: -3.10296 },   
     // Add more locations here
 ];
 
