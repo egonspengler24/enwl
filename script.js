@@ -4,6 +4,12 @@ const locations = [
     // Add more locations here
 ];
 
+function fetchLocations() {
+    // This function can be used to fetch locations if needed
+    // For now, it just calls sortLocations
+    sortLocations();
+}
+
 function sortLocations() {
     const postcode = document.getElementById('postcode').value;
     const geocoder = new google.maps.Geocoder();
