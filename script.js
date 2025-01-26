@@ -23,8 +23,13 @@ function sortLocations() {
                 if (status == 'OK') {
                     const distances = response.rows[0].elements;
                     for (let i = 0; i < locations.length; i++) {
-                        locations[i].distance = distances[i].distance.value;
-                        locations[i].duration = distances[i].duration.value;
+                        if (distances[i].status === 'OK') {
+                            locations[i].distance = distances[i].distance.value;
+                            locations[i].duration = distances[i].duration.value;
+                        } else {
+                            locations[i].distance = Infinity;
+                            locations[i].duration = Infinity;
+                        }
                     }
 
                     locations.sort((a, b) => a.distance - b.distance);
@@ -42,7 +47,7 @@ function displayLocations() {
 
     locations.forEach(location => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${location.name} - ${location.distance / 1000} km - ${location.duration / 60} mins`;
+        listItem.textContent = `${location.name} - ${location.distance !== Infinity ? (location.distance / 1000).toFixed(2) + ' km' : 'N/A'} - ${location.duration !== Infinity ? (location.duration / 60).toFixed(2) + ' mins' : 'N/A'}`;
         list.appendChild(listItem);
     });
 }
