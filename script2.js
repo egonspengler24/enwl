@@ -86,11 +86,11 @@ function updateMap(origin, nearestLocation) {
     }
 
     const originIcon = {
-        url: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', // Green icon for input location
+        url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png', // Green icon for input location
     };
 
     const destinationIcon = {
-        url: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png', // Red icon for nearest location
+        url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png', // Red icon for nearest location
     };
 
     originMarker = new google.maps.Marker({
