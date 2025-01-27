@@ -68,9 +68,11 @@ function displayLocations() {
     const list = document.getElementById('locationList');
     list.innerHTML = '';
 
-    locations.forEach(location => {
+   locations.forEach(location => {
+        const distanceInMiles = location.distance !== Infinity ? (location.distance / 1609.34).toFixed(2) : 'N/A';
+        const durationInMinutes = location.duration !== Infinity ? (location.duration / 60).toFixed(2) : 'N/A';
         const listItem = document.createElement('li');
-        listItem.textContent = `${location.name} - ${location.distance !== Infinity ? (location.distance / 1000).toFixed(2) + ' km' : 'N/A'} - ${location.duration !== Infinity ? (location.duration / 60).toFixed(2) + ' mins' : 'N/A'}`;
+        listItem.textContent = `${location.name} - ${distanceInMiles} miles - ${durationInMinutes} mins`;
         list.appendChild(listItem);
     });
 }
