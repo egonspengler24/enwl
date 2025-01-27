@@ -16,7 +16,7 @@ const locations = [
     { name: "14. Lowther Arms Community Pub", lat: 54.83739699294534, lng: -3.4231102325885034, description: "From mid-day"  },
     { name: "15. Watermill Inn and Brewery", lat: 54.40965863751213, lng: -2.8545677450334987, description: "Serving food &  drink from 12pm - 8pm, warm spaces, showers, mobile charging." }, 
     { name: "16. The Manor Inn and Brewing Co.", lat: 54.500161574990365, lng: -3.5904765518752515, description: "Hot food and drink from 2pm - 8pm, warm space and mobile chanring" },
-    // Add more locations here 
+     // Add more locations here 
 ];
 
 
