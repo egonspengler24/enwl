@@ -10,6 +10,11 @@ const locations = [
     { name: "9. Maes Tea room and gallery", lat: 54.74860763983286, lng:  -3.161987538540455 }, 
     { name: "10. Hundith Hill Hotel", lat: 54.675621334599256, lng: -3.3377687907313747 },
     { name: "11. The Barista Wigton", lat: 54.853097790934235, lng: -3.1592409564749717 }, 
+
+    { name: "12. The Old Bank Tearooms", lat: 54.80416650169004, lng: -3.3187401141001454 },
+    { name: "13. Catering Van Nethertown Square", lat: 54.52139907861723, lng:  -3.5961449027139394 },
+    { name: "14. Lowther Arms Community Pub", lat: 54.83739699294534, lng: -3.4231102325885034  },
+    { name: "15. Watermill Inn and Brewery", lat: 54.40965863751213, lng: -2.8545677450334987 }, 
     // Add more locations here 
 ];
 
