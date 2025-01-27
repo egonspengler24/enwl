@@ -1,8 +1,15 @@
 const locations = [
-    { name: "3. The Kings Head Kirby Stephen (from 8:30am) ", lat: 54.46864472506169, lng: -2.4303786047828804 }, 
-    { name: "4. Watchday nature reserver (from 9am)", lat: 54.90208328078605, lng: -3.086811718433345 }, 
-    { name: "5. The Crossings Inn (from 11am)", lat: 55.073850297332285, lng: -2.762715034706338}, 
-    { name: "6. Graham Arms Inn Carlisle (12pm till 8pm)", lat: 55.04396214453601, lng: -2.968708689617571 }, 
+    { name: "1. The Commodore Inn", lat: 54.228517801041455, lng: -2.9093019885160087 },
+    { name: "2. The Screes Inn", lat: 54.45587337424352, lng: -3.35150170105879 }, 
+    { name: "3. Watchtree Nature Reserve", lat: 54.90997860874174, lng: -3.0905764048378943 }, 
+    { name: "4. The Kings Head Kirby Stephen", lat: 54.46864472506169, lng: -2.4303786047828804 }, 
+    { name: "5. Watchday nature reserver", lat: 54.90208328078605, lng: -3.086811718433345 }, 
+    { name: "6. The Crossings Inn", lat: 55.073850297332285, lng: -2.762715034706338}, 
+    { name: "7. Graham Arms Inn Carlisle", lat: 55.04396214453601, lng: -2.968708689617571 }, 
+    { name: "8. Plough Inn Wray", lat: 54.853097790934235, lng: -2.887329331992143 }, 
+    { name: "9. Maes Tea room and gallery", lat: 54.74860763983286, lng:  -3.161987538540455 }, 
+    { name: "10. Hundith Hill Hotel", lat: 54.675621334599256, lng: -3.3377687907313747 },
+    { name: "11. The Barista Wigton", lat: 54.853097790934235, lng: -3.1592409564749717 }, 
     // Add more locations here
 ];
 
