@@ -1,5 +1,4 @@
 const locations = [
-    { name: "1. The Commodore Inn (Breakfast 9am to 10am)", lat: 54.265915681569346, lng: -2.9245598619938904 }, 
     { name: "3. The Kings Head Kirby Stephen (from 8:30am) ", lat: 54.46864472506169, lng: -2.4303786047828804 }, 
     { name: "4. Watchday nature reserver (from 9am)", lat: 54.90208328078605, lng: -3.086811718433345 }, 
     { name: "5. The Crossings Inn (from 11am)", lat: 55.073850297332285, lng: -2.762715034706338}, 
