@@ -1,7 +1,7 @@
 const locations = [
     { name: "1. The Commodore Inn", lat: 54.228517801041455, lng: -2.9093019885160087, description: "breakfast 9am to 10am, lunch 12pm to 2:30pm" },
     { name: "2. The Screes Inn", lat: 54.45587337424352, lng: -3.35150170105879, description: "breakfast 7am - 9am, lunch from 12pm." }, 
-    { name: "3. Watchtree Nature Reserve", lat: 54.90997860874174, lng: -3.0905764048378943, description: "limited hot menu, lunch from 12pm." }, 
+    { name: "3. The Falcon Club Egremont", lat: 54.52139907861723, lng: -3.5357200972733116, description: "limited hot menu, lunch from 12pm." }, 
     { name: "4. The Kings Head Kirby Stephen", lat: 54.46864472506169, lng: -2.4303786047828804, description: "Hot food and drink, warm space and phone charging. Open from 0830." }, 
     { name: "5. Watchday nature reserver", lat: 54.90208328078605, lng: -3.086811718433345, description: "Hot food, drinks and warm space fromo 9am for food." }, 
     { name: "6. The Crossings Inn", lat: 55.073850297332285, lng: -2.762715034706338, description: "from 11am."}, 
@@ -15,6 +15,7 @@ const locations = [
     { name: "13. Catering Van Nethertown Square", lat: 54.52139907861723, lng:  -3.5961449027139394, description: "Hot food and drinks from 12pm" },
     { name: "14. Lowther Arms Community Pub", lat: 54.83739699294534, lng: -3.4231102325885034, description: "From mid-day"  },
     { name: "15. Watermill Inn and Brewery", lat: 54.40965863751213, lng: -2.8545677450334987, description: "Serving food &  drink from 12pm - 8pm, warm spaces, showers, mobile charging." }, 
+    { name: "16. The Manor Inn and Brewing Co.", lat: 54.500161574990365, lng: -3.5904765518752515, description: "Hot food and drink from 2pm - 8pm, warm space and mobile chanring" },
     // Add more locations here 
 ];
 
@@ -78,7 +79,7 @@ function displayLocations() {
         const distanceInMiles = location.distance !== Infinity ? (location.distance / 1609.34).toFixed(2) : 'N/A';
         const durationInMinutes = location.duration !== Infinity ? Math.round(location.duration / 60) : 'N/A';
         const listItem = document.createElement('li');
-        listItem.textContent = `${location.name} - ${distanceInMiles} miles - ${durationInMinutes} mins`;
+        listItem.innerHTML = `${location.name} - ${distanceInMiles} miles - ${durationInMinutes} mins - <i>${location.description}</i>`;
         list.appendChild(listItem);
     });
 }
