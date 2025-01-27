@@ -1,16 +1,21 @@
 const locations = [
-    { name: "1. The Kings Arms Stainton", lat: 54.720398785748024, lng: -2.8119654466647237, description: "Serving hot food and drink." },
-    { name: "2. The Tavern Hale", lat: 54.270579424973214, lng: -2.762526969486028, description: "Serving hot food and drink." },
-    { name: "3. Southwards catering St Bees", lat: 54.55189826318497, lng: -3.602981081523861, description: "Serving hot food and drink." }, 
-    { name: "4. The Commodore Inn", lat: 54.260954968253756, lng: -2.9108424010221152, description: "Serving hot food and drink." }, 
-    { name: "5. Landy Chef Catering Van Moresby Park Whitehaven", lat: 54.63782539893566, lng: -3.5370631119522664, description: "Serving hot food and drink."}, 
-    { name: "6. Graham Arms Inn Longtown", lat: 55.055308764187735, lng: -2.960280878200811, description: "Serving hot food and drink." }, 
-    { name: "7. Kings Head Hotel Kirby Stephen", lat: 54.4633952407491, lng: -2.4353157080325967, description: "Serving hot food and drink." }, 
-    { name: "8. Southwards Farm Shop Swarthmoor", lat: 54.22163177842559, lng:-3.119214642337905, description: "Serving hot food and drink." },
-    { name: "9. Hundiith Hill Hotel Cockermouth", lat: 54.67833910277971, lng: -3.322461715183655, description: "Serving hot food and drink." },
-    { name: "10. The Strands Hotel Seascale", lat: 54.45381586086482, lng: -3.338941207576554, description: "Serving hot food and drink." }, 
-    { name: "11. Maes Tea Rooms and Gallery", lat: 54.756075660633144, lng: -3.1713996640820725, description: "Serving hot food and drink." }, 
-    // Add more locations here
+    { name: "1. The Commodore Inn", lat: 54.228517801041455, lng: -2.9093019885160087, description: "breakfast 9am to 10am, lunch 12pm to 2:30pm" },
+    { name: "2. The Screes Inn", lat: 54.45587337424352, lng: -3.35150170105879, description: "breakfast 7am - 9am, lunch from 12pm." }, 
+    { name: "3. Watchtree Nature Reserve", lat: 54.90997860874174, lng: -3.0905764048378943, description: "limited hot menu, lunch from 12pm." }, 
+    { name: "4. The Kings Head Kirby Stephen", lat: 54.46864472506169, lng: -2.4303786047828804, description: "Hot food and drink, warm space and phone charging. Open from 0830." }, 
+    { name: "5. Watchday nature reserver", lat: 54.90208328078605, lng: -3.086811718433345, description: "Hot food, drinks and warm space fromo 9am for food." }, 
+    { name: "6. The Crossings Inn", lat: 55.073850297332285, lng: -2.762715034706338, description: "from 11am."}, 
+    { name: "7. Graham Arms Inn Carlisle", lat: 55.04396214453601, lng: -2.968708689617571, description: "hot drinks and hot food, phone charging, showers (bring own towel) from 12pm to 8pm." }, 
+    { name: "8. Plough Inn Wray", lat: 54.853097790934235, lng: -2.887329331992143, description: "Hot food and drinks from 12pm." }, 
+    { name: "9. Maes Tea room and gallery", lat: 54.74860763983286, lng:  -3.161987538540455, description: "Open from 10am. Hot drinks, hot food, phone charging and showers." }, 
+    { name: "10. Hundith Hill Hotel", lat: 54.675621334599256, lng: -3.3377687907313747, description: "Hot food and drinks, warm space from 1030 - 1330" },
+    { name: "11. The Barista Wigton", lat: 54.853097790934235, lng: -3.1592409564749717, description: "Serving hot food and drink." }, 
+
+    { name: "12. The Old Bank Tearooms", lat: 54.80416650169004, lng: -3.3187401141001454, description: "Hot food and drinks from 1030 - 1330" },
+    { name: "13. Catering Van Nethertown Square", lat: 54.52139907861723, lng:  -3.5961449027139394, description: "Hot food and drinks from 12pm" },
+    { name: "14. Lowther Arms Community Pub", lat: 54.83739699294534, lng: -3.4231102325885034, description: "From mid-day"  },
+    { name: "15. Watermill Inn and Brewery", lat: 54.40965863751213, lng: -2.8545677450334987, description: "Serving food &  drink from 12pm - 8pm, warm spaces, showers, mobile charging." }, 
+    // Add more locations here 
 ];
 
 let map;
