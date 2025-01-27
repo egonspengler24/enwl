@@ -10,7 +10,7 @@ const locations = [
     { name: "9. Maes Tea room and gallery", lat: 54.74860763983286, lng:  -3.161987538540455 }, 
     { name: "10. Hundith Hill Hotel", lat: 54.675621334599256, lng: -3.3377687907313747 },
     { name: "11. The Barista Wigton", lat: 54.853097790934235, lng: -3.1592409564749717 }, 
-    // Add more locations here
+    // Add more locations here 
 ];
 
 let map;
