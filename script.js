@@ -3,7 +3,7 @@ const locations = [
     { name: "2. The Screes Inn", lat: 54.45587337424352, lng: -3.35150170105879, description: "breakfast 7am - 9am, lunch from 12pm." }, 
     { name: "3. The Falcon Club Egremont", lat: 54.52139907861723, lng: -3.5357200972733116, description: "limited hot menu, lunch from 12pm." }, 
     { name: "4. The Kings Head Kirby Stephen", lat: 54.46864472506169, lng: -2.4303786047828804, description: "Hot food and drink, warm space and phone charging. Open from 0830." }, 
-    { name: "5. Watchday nature reserver", lat: 54.90208328078605, lng: -3.086811718433345, description: "Hot food, drinks and warm space fromo 9am for food." }, 
+    { name: "5. Watch Tree nature reserver", lat: 54.90208328078605, lng: -3.086811718433345, description: "Hot food, drinks and warm space fromo 9am - 8:30pm" }, 
     { name: "6. The Crossings Inn", lat: 55.073850297332285, lng: -2.762715034706338, description: "from 11am."}, 
     { name: "7. Graham Arms Inn Carlisle", lat: 55.04396214453601, lng: -2.968708689617571, description: "hot drinks and hot food, phone charging, showers (bring own towel) from 12pm to 8pm." }, 
     { name: "8. Plough Inn Wray", lat: 54.853097790934235, lng: -2.887329331992143, description: "Hot food and drinks from 12pm." }, 
