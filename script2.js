@@ -77,7 +77,7 @@ function displayLocations() {
         const distanceInMiles = location.distance !== Infinity ? (location.distance / 1609.34).toFixed(2) : 'N/A';
         const durationInMinutes = location.duration !== Infinity ? Math.round(location.duration / 60) : 'N/A';
         const listItem = document.createElement('li');
-        listItem.innerHTML = `${location.name} - ${distanceInMiles} miles - ${durationInMinutes} mins - <i>${location.description}</i>`;
+        listItem.innerHTML = `<b>${location.name} </b> - ${distanceInMiles} miles - ${durationInMinutes} mins - <i>${location.description}</i>`;
         list.appendChild(listItem);
     });
 }
