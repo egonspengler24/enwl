@@ -1,6 +1,6 @@
 const locations = [
 
-    { name: "1. The Screes Inn", lat: 54.45587337424352, lng: -3.35150170105879, description: "Free breakfasts
+    { name: "1. The Screes Inn", lat: 54.45587337424352, lng: -3.35150170105879, description: "Free breakfasts." },
     { name: "2. The Falcon Club Egremont", lat: 54.52139907861723, lng: -3.5357200972733116, description: "limited hot menu, lunch from 12pm." }, 
     { name: "3. The Kings Head Kirby Stephen", lat: 54.46864472506169, lng: -2.4303786047828804, description: "Hot food and drink, warm space and phone charging. Open from 0830." }, 
     { name: "4. Watch Tree nature reserver", lat: 54.90208328078605, lng: -3.086811718433345, description: "Hot food, drinks and warm space fromo 9am - 8:30pm" }, 
