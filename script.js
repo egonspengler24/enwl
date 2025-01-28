@@ -1,10 +1,10 @@
 const locations = [
 
-    { name: "1. The Screes Inn", lat: 54.45587337424352, lng: -3.35150170105879, description: "breakfast 7am - 9am, lunch from 12pm." }, 
+    { name: "1. The Screes Inn", lat: 54.45587337424352, lng: -3.35150170105879, description: "Free breakfasts
     { name: "2. The Falcon Club Egremont", lat: 54.52139907861723, lng: -3.5357200972733116, description: "limited hot menu, lunch from 12pm." }, 
     { name: "3. The Kings Head Kirby Stephen", lat: 54.46864472506169, lng: -2.4303786047828804, description: "Hot food and drink, warm space and phone charging. Open from 0830." }, 
     { name: "4. Watch Tree nature reserver", lat: 54.90208328078605, lng: -3.086811718433345, description: "Hot food, drinks and warm space fromo 9am - 8:30pm" }, 
-    { name: "5. The Crossings Inn", lat: 55.073850297332285, lng: -2.762715034706338, description: "from 11am."}, 
+    { name: "5. The Crossings Inn", lat: 55.073850297332285, lng: -2.762715034706338, description: "From 6pm."}, 
     { name: "6. Maes Tea room and gallery", lat: 54.74860763983286, lng:  -3.161987538540455, description: "Open from 10am. Hot drinks, hot food, phone charging and showers." }, 
     { name: "7. Lowther Arms Community Pub", lat: 54.83739699294534, lng: -3.4231102325885034, description: "From mid-day"  },
     { name: "8. The Barista Wigton", lat: 54.853097790934235, lng: -3.1592409564749717, description: "Serving hot food and drink." }, 
