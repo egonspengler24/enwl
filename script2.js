@@ -21,6 +21,7 @@ const locations = [
 let map;
 let originMarker;
 let destinationMarker;
+let locationMarkers = [];
 
 function initMap() {
     const initialLocation = { lat: 54.55110183921372, lng: -3.0835090379866132 }; 
@@ -98,6 +99,11 @@ function updateMap(origin, nearestLocation) {
         url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png', // Red icon for nearest location
     };
 
+  const otherLocationsIcon = {
+    url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png', // Blue icon for other locations
+  };
+
+
     originMarker = new google.maps.Marker({
         position: origin,
         map: map,
@@ -111,6 +117,20 @@ function updateMap(origin, nearestLocation) {
         title: nearestLocation.name,
         icon: destinationIcon
     });
+
+    
+locations.forEach(location => {
+    if (location !== nearestLocation) {
+      const marker = new google.maps.Marker({
+        position: { lat: location.lat, lng: location.lng },
+        map: map,
+        title: location.name,
+        icon: otherLocationsIcon
+      });
+      locationMarkers.push(marker);
+    }
+  });
+
 
     map.setCenter(origin);
     map.setZoom(12);
